@@ -6,25 +6,11 @@
 /*   By: matrus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/03 21:39:47 by matrus            #+#    #+#             */
-/*   Updated: 2020/05/08 21:40:23 by matrus           ###   ########.fr       */
+/*   Updated: 2020/07/16 14:55:57 by matrus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_ilen(int nb)
-{
-	if (nb < 0)
-	{
-		if (nb > -10)
-			return (2);
-		else
-			return (ft_ilen(nb / 10 * -1) + 2);
-	}
-	if (nb < 10)
-		return (1);
-	return (ft_ilen(nb / 10) + 1);
-}
 
 char		*ft_itoa(int n)
 {
