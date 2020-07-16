@@ -6,7 +6,7 @@
 /*   By: matrus <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 06:37:31 by matrus            #+#    #+#             */
-/*   Updated: 2020/05/08 12:16:28 by matrus           ###   ########.fr       */
+/*   Updated: 2020/07/16 14:53:32 by matrus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,11 @@ void			ft_lstdelone(t_list *lst, void (*del)(void*));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *ls, void *(*f)(void *), void (*dl)(void *));
+
+/*
+**			NUMBER FUNCTIONS
+*/
+
+int				ft_ilen(int nb);
 
 #endif
