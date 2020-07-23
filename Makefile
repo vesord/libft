@@ -40,10 +40,15 @@ SRC_LIST =		ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 DIR_NUMB =		number
 SRC_NUMB =		ft_ilen.c
 
+DIR_GNL =		gnl
+SRC_GNL =		get_next_line.c get_next_line_utils.c
+
 OBJ_DIR =		obj
 OBJ =	$(SRC_CHAR:%.c=$(DIR_CHAR)/%.o)	$(SRC_MEMORY:%.c=$(DIR_MEMORY)/%.o) \
 		$(SRC_OUTPUT:%.c=$(DIR_OUTPUT)/%.o) $(SRC_STRING:%.c=$(DIR_STRING)/%.o) \
-		$(SRC_LIST:%.c=$(DIR_LIST)/%.o) $(SRC_NUMB:%.c=$(DIR_NUMB)/%.o)
+		$(SRC_LIST:%.c=$(DIR_LIST)/%.o) $(SRC_NUMB:%.c=$(DIR_NUMB)/%.o) \
+		$(SRC_GNL:%.c=$(DIR_GNL)/%.o)
+
 		
 FLAGS = -Wall -Werror -Wextra
 CC = gcc
@@ -62,7 +67,7 @@ $(TMP): $(OBJ_DIR)/%.o: %.c $(INCLUDES)
 
 $(OBJ_DIR):
 	mkdir 	$@ $@/$(DIR_CHAR) $@/$(DIR_MEMORY) $@/$(DIR_LIST) $@/$(DIR_STRING) \
-			$@/$(DIR_NUMB) $@/$(DIR_OUTPUT)
+			$@/$(DIR_NUMB) $@/$(DIR_OUTPUT) $@/$(DIR_GNL)
 
 .PHONY: clean
 clean:
