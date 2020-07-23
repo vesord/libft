@@ -21,7 +21,8 @@ SRC_CHAR = 		ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 
 DIR_MEMORY =	memory
 SRC_MEMORY =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
-				ft_memchr.c ft_memcmp.c ft_calloc.c 
+				ft_memchr.c ft_memcmp.c ft_calloc.c ft_realloc_tab.c \
+			  	ft_free_tab.c	
 
 DIR_OUTPUT =	output
 SRC_OUTPUT =	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
