@@ -35,7 +35,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			ft_free_tab(void **tab);
 void			**ft_realloc_tab(void **tab, int prev_size, int need_size);
-char			**ft_tabdub(char **tab);
+char			**ft_tabdub(const char **tab);
 
 /*
 **			STRING FUNCTIONS

@@ -17,16 +17,16 @@
 ** ends in NULL. The function is protected from leaks.
 */
 
-char	**ft_tabdub(char **tab)
+char	**ft_tabdub(const char **tab)
 {
 	char	**new_tab;
 	char	**tab_end;
 	int		i;
 
-	tab_end = tab;
+	tab_end = (char **)tab;
 	while (tab_end)
 		++tab_end;
-	if ((new_tab = ft_calloc(sizeof(char *), (i = tab_end - tab))))
+	if ((new_tab = ft_calloc(sizeof(char *), (i = tab_end - (char **)tab))))
 	{
 		new_tab[i] = NULL;
 		while (--i)
