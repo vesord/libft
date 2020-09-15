@@ -26,7 +26,7 @@ char	**ft_tabdub(const char **tab)
 	tab_end = (char **)tab;
 	while (*tab_end)
 		++tab_end;
-	if ((new_tab = ft_calloc(sizeof(char *), (i = tab_end - (char **)tab))))
+	if ((new_tab = ft_calloc(sizeof(char *), (i = tab_end - (char **)tab) + 1)))
 	{
 		new_tab[i] = NULL;
 		while (i--)
