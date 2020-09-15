@@ -19,17 +19,17 @@
 
 char	**ft_tabdub(const char **tab)
 {
-	char	**new_tab;
-	char	**tab_end;
-	int		i;
+	char		**new_tab;
+	char		**tab_end;
+	size_t		i;
 
 	tab_end = (char **)tab;
-	while (tab_end)
+	while (*tab_end)
 		++tab_end;
 	if ((new_tab = ft_calloc(sizeof(char *), (i = tab_end - (char **)tab))))
 	{
 		new_tab[i] = NULL;
-		while (--i)
+		while (i--)
 		{
 			if (!(new_tab[i] = ft_strdup(tab[i])))
 			{
