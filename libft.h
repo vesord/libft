@@ -100,4 +100,10 @@ t_list			*ft_lstmap(t_list *ls, void *(*f)(void *), void (*dl)(void *));
 
 int				ft_ilen(int nb);
 
+/*
+**			GET NEXT LINE
+*/
+
+#include "get_next_line.h"
+
 #endif
